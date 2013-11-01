@@ -62,6 +62,8 @@ filetype plugin indent on
 set ignorecase smartcase
 set hlsearch
 set smartindent
+"display as much as can even if the line is not ended
+set display=lastline
 
 "file encoding.
 set fileencodings=utf-8
