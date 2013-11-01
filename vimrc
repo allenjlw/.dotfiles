@@ -68,6 +68,8 @@ set display=lastline
 set wrap
 map j gj
 map k gk
+"do not split work at the end of a line
+set linebreak
 
 "file encoding.
 set fileencodings=utf-8
