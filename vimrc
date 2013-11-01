@@ -64,6 +64,10 @@ set hlsearch
 set smartindent
 "display as much as can even if the line is not ended
 set display=lastline
+"set wrap and make j, k can work
+set wrap
+map j gj
+map k gk
 
 "file encoding.
 set fileencodings=utf-8
