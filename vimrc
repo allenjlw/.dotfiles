@@ -71,6 +71,9 @@ map k gk
 "do not split work at the end of a line
 set linebreak
 
+"always display the status line
+set laststatus=2
+
 "file encoding.
 set fileencodings=utf-8
 "set fileencoding=utf-8,GB2312,GBK,GB18030
