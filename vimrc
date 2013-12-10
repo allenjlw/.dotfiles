@@ -81,7 +81,7 @@ set termencoding=utf-8
 set encoding=prc
 
 "set foldenable
-set foldmethod=syntax
+set foldmethod=manual
 set foldcolumn=1
 setlocal foldlevel=1
 "set foldclose=all
