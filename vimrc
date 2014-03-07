@@ -86,3 +86,6 @@ set foldmethod=manual
 "setlocal foldlevel=1
 "set foldclose=all
 "nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc':'zO')<CR>
+
+"smali plugin configure
+filetype on
