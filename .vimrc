@@ -41,27 +41,28 @@ endif
 " differently from regular Vi. They are highly recommended though.
 "set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
-"set ignorecase		" Do case insensitive matching
-"set smartcase		" Do smart case matching
+set ignorecase		" Do case insensitive matching
+set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 "set autowrite		" Automatically save before commands like :next and :make
 "set hidden             " Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
 
 " Source a global configuration file if available
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
-endif
+"if filereadable("/etc/vim/vimrc.local")
+"  source /etc/vim/vimrc.local
+"endif
 
-set nocompatible
+"set nocompatible
 set number
 "set cursorline
 set shiftwidth=4
 set tabstop=4
-filetype plugin indent on
-set ignorecase smartcase
+set expandtab
+set smarttab
 set hlsearch
 set smartindent
+set autoindent
 "display as much as can even if the line is not ended
 set display=lastline
 "set wrap and make j, k can work
@@ -80,12 +81,23 @@ set fileencodings=utf-8
 set termencoding=utf-8
 set encoding=prc
 
-"set foldenable
-set foldmethod=manual
+set foldenable
+set foldmethod=syntax
 "set foldcolumn=1
-"setlocal foldlevel=1
+setlocal foldlevel=1
 "set foldclose=all
-"nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc':'zO')<CR>
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc':'zO')<CR>
 
 "smali plugin configure
-filetype on
+filetype plugin on
+filetype indent on
+"auto read when file is changed from outside
+set autoread
+"Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+syntax enable
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
