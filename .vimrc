@@ -84,7 +84,7 @@ set encoding=prc
 set foldenable
 set foldmethod=syntax
 "set foldcolumn=1
-setlocal foldlevel=1
+setlocal foldlevel=99
 "set foldclose=all
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc':'zO')<CR>
 
