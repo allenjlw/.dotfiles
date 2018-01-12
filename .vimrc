@@ -56,8 +56,8 @@ set incsearch		" Incremental search
 "set nocompatible
 set number
 "set cursorline
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 set smarttab
 set hlsearch
@@ -103,3 +103,5 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 set complete+=kspell
+
+set spelllang=en
