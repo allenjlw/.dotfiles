@@ -3,5 +3,5 @@ This project is created for storing my personal vimrc file.
 I will probably update it slowly and without any comment.:)
 
 Usage:
-1. git clone https://github.com/lucuswu/vimrc.git (at ~ directory)
-2. ln -s ./vimrc/vimrc .vimrc
+1. git clone https://allenjl@bitbucket.org/allenjl/vrc.git (at ~ directory)
+2. ln -s ./vrc/.vimrc
