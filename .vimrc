@@ -13,7 +13,7 @@ runtime! debian.vim
 " Uncomment the next line to make Vim more Vi-compatible
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
 " options, so any other options should be set AFTER setting 'compatible'.
-"set compatible
+"set compatiblelet mapleader=","       " leader is comma
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the
 " following enables syntax highlighting by default.
@@ -56,8 +56,9 @@ set incsearch		" Incremental search
 "set nocompatible
 set number
 "set cursorline
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set expandtab
 set smarttab
 set hlsearch
@@ -105,3 +106,16 @@ map <C-l> <C-W>l
 set complete+=kspell
 
 set spelllang=en
+
+set list
+set lcs=trail:.
+
+set lazyredraw
+
+" turn off search highlight
+let mapleader=","       " leader is comma
+nnoremap <leader><space> :nohlsearch<CR>
+
+" set B and E to go to the begining and end of line
+nnoremap B ^
+nnoremap E $
