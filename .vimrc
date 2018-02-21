@@ -119,3 +119,6 @@ nnoremap <leader><space> :nohlsearch<CR>
 " set B and E to go to the begining and end of line
 nnoremap B ^
 nnoremap E $
+
+" set pastetoggle to <leader>.(,.)
+set pastetoggle=<leader>.
