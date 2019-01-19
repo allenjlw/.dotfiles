@@ -161,8 +161,8 @@ set complete+=kspell
 
 set spelllang=en
 
-set list
-set lcs=tab:->,trail:.
+" set list
+" set lcs=trail:.
 
 set lazyredraw
 
@@ -179,3 +179,6 @@ set pastetoggle=<leader>.
 
 let base16colorspace=256  " Access colors present in 256 colorspace
 
+" highlight extra space
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
