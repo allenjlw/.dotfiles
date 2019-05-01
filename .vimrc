@@ -29,6 +29,7 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'itchyny/lightline.vim'
 Plugin 'chriskempson/base16-vim'
+Plugin 'craigemery/vim-autotag'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
