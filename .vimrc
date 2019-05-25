@@ -30,6 +30,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'itchyny/lightline.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'craigemery/vim-autotag'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -186,8 +187,8 @@ match ExtraWhitespace /\s\+$/
 
 set number relativenumber
 
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
+"augroup numbertoggle
+"  autocmd!
+"  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+"  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+"augroup END
