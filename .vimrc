@@ -186,6 +186,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
 set number relativenumber
+set tags+=tags;/
 
 "augroup numbertoggle
 "  autocmd!
