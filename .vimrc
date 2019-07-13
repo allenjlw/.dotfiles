@@ -193,6 +193,9 @@ match ExtraWhitespace /\s\+$/
 set number relativenumber
 set tags+=tags;/
 
+" disable vimtex compiler
+let g:vimtex_compiler_enabled=0
+
 "augroup numbertoggle
 "  autocmd!
 "  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
