@@ -31,6 +31,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'craigemery/vim-autotag'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'lervag/vimtex'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -125,8 +126,8 @@ set autoindent
 set display=lastline
 "set wrap and make j, k can work
 set wrap
-map j gj
-map k gk
+nnoremap j gj
+nnoremap k gk
 "do not split work at the end of a line
 set linebreak
 
@@ -154,10 +155,14 @@ set autoread
 set so=7
 syntax enable
 " Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
+
+" Short cut to move between tabs
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 
 set complete+=kspell
 
