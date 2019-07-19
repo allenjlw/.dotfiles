@@ -178,8 +178,8 @@ let mapleader=","       " leader is comma
 nnoremap <leader><space> :nohlsearch<CR>
 
 " set B and E to go to the begining and end of line
-nnoremap B ^
-nnoremap E $
+nnoremap B g^
+nnoremap E g$
 
 " set pastetoggle to <leader>.(,.)
 set pastetoggle=<leader>.
