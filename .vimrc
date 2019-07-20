@@ -29,6 +29,9 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'itchyny/lightline.vim'
 Plugin 'chriskempson/base16-vim'
+Plugin 'craigemery/vim-autotag'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'lervag/vimtex'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -184,11 +187,12 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
 set number relativenumber
+set tags+=tags;/
 
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
 
 :set backspace=indent,eol,start
+"augroup numbertoggle
+"  autocmd!
+"  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+"  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+"augroup END
