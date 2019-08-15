@@ -126,8 +126,8 @@ set autoindent
 set display=lastline
 "set wrap and make j, k can work
 set wrap
-map j gj
-map k gk
+nnoremap j gj
+nnoremap k gk
 "do not split work at the end of a line
 set linebreak
 
@@ -155,10 +155,14 @@ set autoread
 set so=7
 syntax enable
 " Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
+
+" Short cut to move between tabs
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 
 set complete+=kspell
 
@@ -174,8 +178,8 @@ let mapleader=","       " leader is comma
 nnoremap <leader><space> :nohlsearch<CR>
 
 " set B and E to go to the begining and end of line
-nnoremap B ^
-nnoremap E $
+nnoremap B g^
+nnoremap E g$
 
 " set pastetoggle to <leader>.(,.)
 set pastetoggle=<leader>.
@@ -190,7 +194,11 @@ set number relativenumber
 set tags+=tags;/
 
 
-:set backspace=indent,eol,start
+set backspace=indent,eol,start
+
+" disable vimtex compiler
+let g:vimtex_compiler_enabled=0
+
 "augroup numbertoggle
 "  autocmd!
 "  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
