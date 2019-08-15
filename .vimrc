@@ -113,7 +113,6 @@ set incsearch		" Incremental search
 "set nocompatible
 set number
 set cursorline
-hi cursorline ctermbg=DarkGrey cterm=bold
 
 set shiftwidth=4
 set softtabstop=4
