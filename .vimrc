@@ -214,8 +214,8 @@ let g:NERDToggleCheckAllLines = 1
 let g:netrw_liststyle = 3
 " set window size
 let g:netrw_winsize = 20
-" set open type
-let g:netrw_browse_split = 3
+" ,ft to open file tree in new tab
+nnoremap <leader>ft :tabnew<CR>:Ex<CR>
 
 "augroup numbertoggle
 "  autocmd!
