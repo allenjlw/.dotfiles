@@ -24,14 +24,15 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
+" Auto complete
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'itchyny/lightline.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'craigemery/vim-autotag'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
-" Plugin 'lervag/vimtex'
+Plugin 'lervag/vimtex'
+Plugin 'scrooloose/nerdcommenter'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -112,8 +113,7 @@ set incsearch		" Incremental search
 "set nocompatible
 set number
 set cursorline
-hi cursorline cterm=none
-hi cursorlinenr ctermfg=red
+
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
@@ -195,6 +195,28 @@ set tags+=tags;/
 
 " disable vimtex compiler
 let g:vimtex_compiler_enabled=0
+
+" nerdcommenter setting
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1
+
+" netrw setting
+" set display style
+let g:netrw_liststyle = 3
+" set window size
+let g:netrw_winsize = 20
+" set open type
+let g:netrw_browse_split = 3
+" ,ft to open file tree in new tab
+nnoremap <leader>ft :tabnew<CR>:Ex<CR>
 
 "augroup numbertoggle
 "  autocmd!
