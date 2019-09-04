@@ -28,7 +28,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'itchyny/lightline.vim'
 Plugin 'chriskempson/base16-vim'
-Plugin 'craigemery/vim-autotag'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'lervag/vimtex'
 Plugin 'scrooloose/nerdcommenter'
@@ -191,7 +190,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
 set number relativenumber
-set tags+=.tags;/
+set tags+=tags;/
 
 " disable vimtex compiler
 let g:vimtex_compiler_enabled=0
