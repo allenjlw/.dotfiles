@@ -32,6 +32,7 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'lervag/vimtex'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'terryma/vim-smooth-scroll'
+Plugin 'craigemery/vim-autotag'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
