@@ -1,7 +1,9 @@
-This project is created for storing my personal vimrc file.
+This project is created for storing my personal configuration file.
 
 I will probably update it slowly and without any comment.:)
 
 Usage:
 1. Clone the repository
 2. ln -s ./.vrc/.vimrc
+3. ln -s ./.vrc/.ctags
+4. ln -s ./.vrc/.tmux.conf
