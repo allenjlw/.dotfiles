@@ -18,6 +18,8 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'lervag/vimtex'
 " Shortcut for comment line
 Plug 'scrooloose/nerdcommenter'
+" Smooth scroll plugin
+Plug 'terryma/vim-smooth-scroll'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between plug#begin/end.
@@ -26,13 +28,13 @@ Plug 'scrooloose/nerdcommenter'
 call plug#end()            " required
 "
 " Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" Put your non-Plugin stuff after this line
-
+" PlugInstall [name ...] [#threads]   -Install plugins
+" PlugUpdate [name ...] [#threads]    -Install or update plugins
+" PlugClean[!]                        -Remove unlisted plugins (bang version will clean without prompt)
+" PlugUpgrade                         -Upgrade vim-plug itself
+" PlugStatus                          -Check the status of plugins
+" PlugDiff                            -Examine changes from the previous update and the pending changes
+" PlugSnapshot[!] [output path]       -Generate script for restoring the current snapshot of the plugins
 
 "set compatiblelet mapleader=","       " leader is comma
 
