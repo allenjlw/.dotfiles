@@ -26,13 +26,13 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " Auto complete
 Plugin 'Valloric/YouCompleteMe'
-
 Plugin 'itchyny/lightline.vim'
 Plugin 'chriskempson/base16-vim'
-Plugin 'craigemery/vim-autotag'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'lervag/vimtex'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'terryma/vim-smooth-scroll'
+Plugin 'craigemery/vim-autotag'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -221,6 +221,12 @@ let g:netrw_winsize = 20
 let g:netrw_browse_split = 3
 " ,ft to open file tree in new tab
 nnoremap <leader>ft :tabnew<CR>:Ex<CR>
+
+"smooth scroll setting
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 "augroup numbertoggle
 "  autocmd!
