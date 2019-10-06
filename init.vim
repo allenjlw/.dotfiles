@@ -1,61 +1,29 @@
-" All system-wide defaults are set in $VIMRUNTIME/debian.vim (usually just
-" /usr/share/vim/vimcurrent/debian.vim) and sourced by the call to :runtime
-" you can find below.  If you wish to change any of those settings, you should
-" do it in this file (/etc/vim/vimrc), since debian.vim will be overwritten
-" everytime an upgrade of the vim packages is performed.  It is recommended to
-" make changes after sourcing debian.vim since it alters the value of the
-" 'compatible' option.
-
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages available in Debian.
-runtime! debian.vim
-
 set encoding=utf-8
 
-" set to use vundle
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" Use vim-plug plugin manager
+" Set plug-in folder
+call plug#begin('~/.vim/bundle')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
 " Auto complete
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'itchyny/lightline.vim'
-Plugin 'chriskempson/base16-vim'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
-Plugin 'lervag/vimtex'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'terryma/vim-smooth-scroll'
-Plugin 'craigemery/vim-autotag'
+Plug 'Valloric/YouCompleteMe'
+" highlight line
+Plug 'itchyny/lightline.vim'
+" Base16 color scheme
+Plug 'chriskempson/base16-vim'
+" Auto ctag plugin
+Plug 'craigemery/vim-autotag'
+" Number toggle plugin
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+" Latex plugin
+Plug 'lervag/vimtex'
+" Shortcut for comment line
+Plug 'scrooloose/nerdcommenter'
 
 " The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
+" Keep Plugin commands between plug#begin/end.
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+call plug#end()            " required
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -63,13 +31,9 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
-" see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
 
-" Uncomment the next line to make Vim more Vi-compatible
-" NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
-" options, so any other options should be set AFTER setting 'compatible'.
 "set compatiblelet mapleader=","       " leader is comma
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the
@@ -194,9 +158,6 @@ match ExtraWhitespace /\s\+$/
 set number relativenumber
 set tags+=tags;/
 
-
-set backspace=indent,eol,start
-
 " disable vimtex compiler
 let g:vimtex_compiler_enabled=0
 
@@ -221,12 +182,6 @@ let g:netrw_winsize = 20
 let g:netrw_browse_split = 3
 " ,ft to open file tree in new tab
 nnoremap <leader>ft :tabnew<CR>:Ex<CR>
-
-"smooth scroll setting
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 "augroup numbertoggle
 "  autocmd!
