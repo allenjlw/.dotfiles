@@ -184,6 +184,8 @@ let g:netrw_winsize = 20
 let g:netrw_browse_split = 3
 " ,ft to open file tree in new tab
 nnoremap <leader>ft :tabnew<CR>:Ex<CR>
+" ,t jump to tag in new tab
+nnoremap <leader>t <C-w><C-]><C-w>T
 
 "augroup numbertoggle
 "  autocmd!
