@@ -20,6 +20,8 @@ Plug 'lervag/vimtex'
 Plug 'scrooloose/nerdcommenter'
 " Smooth scroll plugin
 Plug 'terryma/vim-smooth-scroll'
+" java autocomplete
+Plug 'artur-shaik/vim-javacomplete2'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between plug#begin/end.
@@ -192,3 +194,9 @@ nnoremap <leader>t <C-w><C-]><C-w>T
 "  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 "  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 "augroup END
+
+" javacomplete setting
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+" auto import using F5
+nmap <F5> <Plug>(JavaComplete-Imports-Add)
+imap <F5> <Plug>(JavaComplete-Imports-Add)
