@@ -108,7 +108,7 @@ set fileencodings=utf-8
 "set fileencoding=utf-8,GB2312,GBK,GB18030
 set termencoding=utf-8
 
-set foldenable
+"set foldenable
 set foldmethod=syntax
 "set foldcolumn=1
 setlocal foldlevel=99
@@ -161,6 +161,9 @@ match ExtraWhitespace /\s\+$/
 
 set number relativenumber
 set tags+=tags;/
+
+" disable preview window
+set completeopt-=preview
 
 " disable vimtex compiler
 let g:vimtex_compiler_enabled=0
