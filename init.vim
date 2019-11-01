@@ -108,7 +108,7 @@ set fileencodings=utf-8
 "set fileencoding=utf-8,GB2312,GBK,GB18030
 set termencoding=utf-8
 
-"set foldenable
+set nofoldenable
 set foldmethod=syntax
 "set foldcolumn=1
 setlocal foldlevel=99
