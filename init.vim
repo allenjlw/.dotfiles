@@ -191,6 +191,8 @@ let g:netrw_browse_split = 3
 nnoremap <leader>ft :tabnew<CR>:Ex<CR>
 " ,t jump to tag in new tab
 nnoremap <leader>t <C-w><C-]><C-w>T
+" set to use clipboard for copy/paste
+set clipboard+=unnamedplus
 
 "augroup numbertoggle
 "  autocmd!
