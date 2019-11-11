@@ -19,7 +19,7 @@ Plug 'lervag/vimtex'
 " Shortcut for comment line
 Plug 'scrooloose/nerdcommenter'
 " Smooth scroll plugin
-Plug 'terryma/vim-smooth-scroll'
+Plug 'yuttie/comfortable-motion.vim'
 " java autocomplete
 Plug 'artur-shaik/vim-javacomplete2'
 
