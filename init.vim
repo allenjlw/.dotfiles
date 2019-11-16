@@ -194,11 +194,6 @@ nnoremap <leader>t <C-w><C-]><C-w>T
 " set to use clipboard for copy/paste
 set clipboard+=unnamedplus
 
-"augroup numbertoggle
-"  autocmd!
-"  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-"  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-"augroup END
 
 " javacomplete setting
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
