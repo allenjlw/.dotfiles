@@ -2,8 +2,16 @@ This project is created for storing my personal configuration file.
 
 I will probably update it slowly and without any comment.:)
 
+Requirements:
+  -jedi for python:
+    python3 -m pip install --user jedi
+  -coc-python extension:
+    :CocInstall coc-python
+
+
 Usage:
 1. Clone the repository
-2. ln -s ./.vrc/.vimrc
-3. ln -s ./.vrc/.ctags
-4. ln -s ./.vrc/.tmux.conf
+2. cd ~/.config/nvim/ & ln -s ~/.vrc/init.vim
+3. cd ~/.config/nvim/ & ln -s ~/.vrc/coc-settings.json
+4. ln -s ./.vrc/.ctags
+5. ln -s ./.vrc/.tmux.conf
