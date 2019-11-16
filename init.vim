@@ -23,6 +23,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'yuttie/comfortable-motion.vim'
 " java autocomplete
 Plug 'artur-shaik/vim-javacomplete2'
+" color theme
+Plug 'morhetz/gruvbox'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between plug#begin/end.
@@ -266,3 +268,6 @@ nmap <leader>rn <Plug>(coc-rename)
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
 
+" gruvbox theme
+colorscheme gruvbox
+set background=dark
