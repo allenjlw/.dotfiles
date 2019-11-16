@@ -194,20 +194,6 @@ nnoremap <leader>t <C-w><C-]><C-w>T
 " set to use clipboard for copy/paste
 set clipboard+=unnamedplus
 
-" youcompleteme semantic complete
-let g:ycm_semantic_triggers =  {
-  \   'c': ['->', '.'],
-  \   'objc': ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-  \            're!\[.*\]\s'],
-  \   'ocaml': ['.', '#'],
-  \   'cpp,cuda,objcpp': ['->', '.', '::'],
-  \   'perl': ['->'],
-  \   'php': ['->', '::'],
-  \   'cs,d,elixir,go,groovy,java,javascript,julia,perl6,python,scala,typescript,vb': ['.'],
-  \   'ruby,rust': ['.', '::'],
-  \   'lua': ['.', ':'],
-  \   'erlang': [':'],
-  \ }
 
 " javacomplete setting
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
