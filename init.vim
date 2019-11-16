@@ -194,7 +194,6 @@ nnoremap <leader>t <C-w><C-]><C-w>T
 " set to use clipboard for copy/paste
 set clipboard+=unnamedplus
 
-
 " javacomplete setting
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 " auto import using F5
