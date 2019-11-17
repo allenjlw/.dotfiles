@@ -8,7 +8,7 @@
       "filetypes": ["c", "cpp", "objc", "objcpp"]
     },
     "latex": {
-      "command": "/home/wu/tool_bin/texlab",
+      "command": "texlab",
       "filetypes": ["tex", "bib", "plaintex", "context"]
     }
   }
