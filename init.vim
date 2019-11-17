@@ -264,6 +264,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
+" Fix autofix problem of current line
+nmap <leader>f  <Plug>(coc-fix-current)
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
