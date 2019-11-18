@@ -174,6 +174,8 @@ let g:ycm_auto_trigger=1
 let g:vimtex_compiler_enabled=0
 
 " nerdcommenter setting
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
 " Align line-wise comment delimiters flush left instead of following code indentation
