@@ -86,7 +86,7 @@ set number
 set cursorline
 hi cursorline ctermbg=DarkGrey cterm=bold
 
-set shiftwidth=4
+set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
