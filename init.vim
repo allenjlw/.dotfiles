@@ -25,6 +25,11 @@ Plug 'yuttie/comfortable-motion.vim'
 Plug 'artur-shaik/vim-javacomplete2'
 " color theme
 Plug 'morhetz/gruvbox'
+" Nerdtree
+Plug 'scrooloose/nerdtree'
+" Nerdtreetab
+Plug 'jistr/vim-nerdtree-tabs'
+
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between plug#begin/end.
@@ -195,7 +200,9 @@ let g:netrw_winsize = 20
 " set open type
 let g:netrw_browse_split = 3
 " ,ft to open file tree in new tab
-nnoremap <leader>ft :tabnew<CR>:Ex<CR>
+" nnoremap <leader>ft :tabnew<CR>:Ex<CR>
+map <leader>ft <plug>NERDTreeTabsToggle<CR>
+
 " ,t jump to tag in new tab
 nnoremap <leader>t <C-w><C-]><C-w>T
 " set to use clipboard for copy/paste
@@ -275,3 +282,6 @@ command! -nargs=0 Format :call CocAction('format')
 " gruvbox theme
 colorscheme gruvbox
 set background=dark
+
+" open nerdtree on start
+let g:nerdtree_tabs_open_on_console_startup = 1
