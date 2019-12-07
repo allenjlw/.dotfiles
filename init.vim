@@ -29,6 +29,8 @@ Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 " Nerdtreetab
 Plug 'jistr/vim-nerdtree-tabs'
+" Tagbar
+Plug 'majutsushi/tagbar'
 
 
 " The following are examples of different formats supported.
@@ -285,3 +287,6 @@ set background=dark
 
 " open nerdtree on start
 let g:nerdtree_tabs_open_on_console_startup = 1
+
+" shortcut to open tagbar
+nmap <leader>b :TagbarToggle<CR>
