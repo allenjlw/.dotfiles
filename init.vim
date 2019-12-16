@@ -170,7 +170,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
 set number relativenumber
-set tags+=tags;/
+set tags+=.tags;/
 
 " disable preview window
 set completeopt-=preview
