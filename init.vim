@@ -282,6 +282,7 @@ nmap <leader>f  <Plug>(coc-fix-current)
 command! -nargs=0 Format :call CocAction('format')
 
 " gruvbox theme
+let g:gruvbox_guisp_fallback = "bg" " fix spell error not displayed
 colorscheme gruvbox
 set background=dark
 
