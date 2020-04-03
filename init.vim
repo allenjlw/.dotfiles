@@ -107,8 +107,8 @@ set display=lastline
 set wrap
 nnoremap j gj
 nnoremap k gk
-noremap 0 g0
-noremap $ g$
+" noremap 0 g0
+" noremap $ g$
 vnoremap j gj
 vnoremap k gk
 "do not split work at the end of a line
