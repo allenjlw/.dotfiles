@@ -14,3 +14,8 @@ Usage:
 2. cd ~/.config & ln -s ~/.vrc/nvim
 3. ln -s ./.vrc/.ctags
 4. ln -s ./.vrc/.tmux.conf
+5. Sublime text 3 preference directory
+    Windows: %APPDATA%\Sublime Text 3\Packages\User\
+    Linux: ~/.config/sublime-text-3/Packages/User/
+    OS X: ~/Library/Application Support/Sublime Text 3/Packages/User/
+
