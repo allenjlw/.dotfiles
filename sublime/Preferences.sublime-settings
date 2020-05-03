@@ -16,6 +16,6 @@
 	"show_encoding": true,
 	"tab_size": 2,
 	"vintage_start_in_command_mode": true,
-	"vintageous_use_ctrl_keys": null,
+	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": null
 }
