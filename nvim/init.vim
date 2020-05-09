@@ -16,13 +16,13 @@ Plug 'craigemery/vim-autotag'
 " Number toggle plugin
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 " Latex plugin
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 " Shortcut for comment line
 Plug 'scrooloose/nerdcommenter'
 " Smooth scroll plugin
 Plug 'yuttie/comfortable-motion.vim'
 " java autocomplete
-Plug 'artur-shaik/vim-javacomplete2'
+"Plug 'artur-shaik/vim-javacomplete2'
 " color theme
 Plug 'morhetz/gruvbox'
 " Nerdtree
@@ -183,7 +183,7 @@ set completeopt-=preview
 let g:ycm_auto_trigger=1
 
 " disable vimtex compiler
-let g:vimtex_compiler_enabled=0
+" let g:vimtex_compiler_enabled=0
 
 " nerdcommenter setting
 " Add spaces after comment delimiters by default
@@ -216,10 +216,10 @@ nnoremap <leader>t <C-w><C-]><C-w>T
 set clipboard+=unnamedplus
 
 " javacomplete setting
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
+" autocmd FileType java setlocal omnifunc=javacomplete#Complete
 " auto import using F5
-nmap <F5> <Plug>(JavaComplete-Imports-Add)
-imap <F5> <Plug>(JavaComplete-Imports-Add)
+" nmap <F5> <Plug>(JavaComplete-Imports-Add)
+" imap <F5> <Plug>(JavaComplete-Imports-Add)
 
 " coc.nvim config
 " if hidden is not set, TextEdit might fail.
