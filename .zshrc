@@ -56,9 +56,9 @@ plugins=(
     tig
     colored-man-pages
     command-not-found
+    zsh_reload
     zsh-autosuggestions
     zsh-syntax-highlighting
-    zsh_reload
 )
 
 source $ZSH/oh-my-zsh.sh
