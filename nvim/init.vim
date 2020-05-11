@@ -296,3 +296,9 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 
 " shortcut to open tagbar
 nmap <leader>b :TagbarToggle<CR>
+
+" auto syntax highlight .smali and .lus type
+au BufRead,BufNewfile *.smali set filetype=smali
+au BufRead,BufNewfile *.lus set filetype=lustre
+
+
