@@ -15,14 +15,10 @@ Plug 'chriskempson/base16-vim'
 Plug 'craigemery/vim-autotag'
 " Number toggle plugin
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-" Latex plugin
-" Plug 'lervag/vimtex'
 " Shortcut for comment line
 Plug 'scrooloose/nerdcommenter'
 " Smooth scroll plugin
 Plug 'yuttie/comfortable-motion.vim'
-" java autocomplete
-"Plug 'artur-shaik/vim-javacomplete2'
 " color theme
 Plug 'morhetz/gruvbox'
 " Nerdtree
@@ -31,6 +27,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 " Tagbar
 Plug 'majutsushi/tagbar'
+" Rainbow parentheses
+Plug 'luochen1990/rainbow'
+" fzf plugin
+Plug 'junegunn/fzf'
 
 
 " The following are examples of different formats supported.
@@ -293,6 +293,9 @@ set background=dark
 
 " open nerdtree on start
 let g:nerdtree_tabs_open_on_console_startup = 1
+
+" enable raindow parentheses
+let g:rainbow_active = 1
 
 " shortcut to open tagbar
 nmap <leader>b :TagbarToggle<CR>
