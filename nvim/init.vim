@@ -31,6 +31,8 @@ Plug 'majutsushi/tagbar'
 Plug 'luochen1990/rainbow'
 " fzf plugin
 Plug 'junegunn/fzf'
+" vimtex plugin
+Plug 'lervag/vimtex'
 
 
 " The following are examples of different formats supported.
@@ -159,6 +161,7 @@ set lazyredraw
 
 " turn off search highlight
 let mapleader=","       " leader is comma
+let maplocalleader=","       " localleader is comma
 nnoremap <leader><space> :nohlsearch<CR>
 
 " set B and E to go to the begining and end of line
@@ -183,7 +186,13 @@ set completeopt-=preview
 let g:ycm_auto_trigger=1
 
 " disable vimtex compiler
-" let g:vimtex_compiler_enabled=0
+let g:vimtex_compiler_enabled=0
+" set .tex flaver
+let g:tex_flavor = 'latex'
+" set backword research callback
+let g:vimtex_latexmk_progname = 'nvr'
+" set pdf reviewer
+let g:vimtex_view_method = 'zathura'
 
 " nerdcommenter setting
 " Add spaces after comment delimiters by default
