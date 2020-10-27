@@ -309,6 +309,19 @@ let g:rainbow_active = 1
 " shortcut to open tagbar
 nmap <leader>b :TagbarToggle<CR>
 
+" tagbar for latex
+let g:tagbar_type_tex = {
+    \ 'ctagstype' : 'latex',
+    \ 'kinds'     : [
+        \ 's:sections',
+        \ 'g:graphics:0:0',
+        \ 'l:labels',
+        \ 'r:refs:1:0',
+        \ 'p:pagerefs:1:0'
+    \ ],
+    \ 'sort'    : 0,
+\ }
+
 " auto syntax highlight .smali and .lus type
 au BufRead,BufNewfile *.smali set filetype=smali
 au BufRead,BufNewfile *.lus set filetype=lustre
