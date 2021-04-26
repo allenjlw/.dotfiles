@@ -109,5 +109,11 @@ alias qemu-arm="qemu-arm -L /usr/arm-linux-gnueabi/"
 # used for wllvm
 export LLVM_COMPILER=clang
 
+# zsh highlighting color change
+ZSH_HIGHLIGHT_STYLES[command]=fg='010'
+ZSH_HIGHLIGHT_STYLES[alias]=fg='010'
+ZSH_HIGHLIGHT_STYLES[builtin]=fg='010'
+ZSH_HIGHLIGHT_STYLES[function]=fg='010'
+
 # used for virtualenvwrapper
 source $HOME/.local/bin/virtualenvwrapper.sh
