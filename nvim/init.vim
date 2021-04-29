@@ -301,7 +301,7 @@ colorscheme gruvbox
 set background=dark
 
 " open nerdtree on start
-let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_open_on_console_startup = 0
 
 " enable raindow parentheses
 let g:rainbow_active = 1
@@ -322,8 +322,9 @@ let g:tagbar_type_tex = {
     \ 'sort'    : 0,
 \ }
 
-" auto syntax highlight .smali and .lus type
+" auto syntax highlight .smali .lus .pv type
 au BufRead,BufNewfile *.smali set filetype=smali
 au BufRead,BufNewfile *.lus set filetype=lustre
+au BufRead,BufNewFile *.pv set filetype=proverif
 
 
