@@ -12,7 +12,7 @@ Plug 'itchyny/lightline.vim'
 " Base16 color scheme
 Plug 'chriskempson/base16-vim'
 " Auto ctag plugin
-Plug 'craigemery/vim-autotag'
+" Plug 'craigemery/vim-autotag'
 " Number toggle plugin
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 " Shortcut for comment line
@@ -303,8 +303,14 @@ set background=dark
 " open nerdtree on start
 let g:nerdtree_tabs_open_on_console_startup = 0
 
-" enable raindow parentheses
+" enable rainbow parentheses
 let g:rainbow_active = 1
+" disable rainbow in proverif
+let g:rainbow_conf = {
+      \  'separately': {
+      \    'proverif': 0,
+      \  }
+      \}
 
 " shortcut to open tagbar
 nmap <leader>b :TagbarToggle<CR>
@@ -326,5 +332,3 @@ let g:tagbar_type_tex = {
 au BufRead,BufNewfile *.smali set filetype=smali
 au BufRead,BufNewfile *.lus set filetype=lustre
 au BufRead,BufNewFile *.pv set filetype=proverif
-
-
