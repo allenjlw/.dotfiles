@@ -31,11 +31,11 @@ highlight def link proverifComment Comment
 
 " general format:
 " highlight Statement   term=bold      cterm=NONE ctermfg=white     ctermbg=NONE   " gui=bold       guifg=#ffff60    guibg=NONE
-highlight proverifKeywordsColor cterm=bold ctermfg=5
-highlight proverifTypesColor cterm=NONE ctermfg=2
+highlight proverifKeywordsColor cterm=bold ctermfg=162
+highlight proverifTypesColor cterm=NONE ctermfg=10
 highlight proverifValuesColor cterm=NONE ctermfg=3
 highlight proverifOperatorsColor cterm=NONE ctermfg=6
-highlight proverifQualifiersColor cterm=NONE ctermfg=5
+highlight proverifQualifiersColor cterm=NONE ctermfg=162
 
 " link the (left) element with its color (right)
 highlight def link proverifKeywords proverifKeywordsColor
