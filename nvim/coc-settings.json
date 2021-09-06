@@ -10,6 +10,11 @@
     "latex": {
       "command": "texlab",
       "filetypes": ["tex", "bib", "plaintex", "context"]
+    },
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["cargo.toml"]
     }
   }
 }
