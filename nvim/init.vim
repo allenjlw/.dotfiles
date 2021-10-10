@@ -156,8 +156,8 @@ set complete+=kspell
 
 set spelllang=en
 
-" set list
-" set lcs=trail:.
+set listchars=tab:>-
+set list
 
 set lazyredraw
 
@@ -174,10 +174,6 @@ nnoremap E g$
 set pastetoggle=<leader>.
 
 let base16colorspace=256  " Access colors present in 256 colorspace
-
-" highlight extra space
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
 
 set number relativenumber
 set tags+=.tags;/
@@ -342,3 +338,9 @@ au BufRead,BufNewFile *.pv set filetype=proverif
 " enable indent guide by default
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+
+" highlight extra space
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
