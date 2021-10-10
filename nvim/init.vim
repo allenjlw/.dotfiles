@@ -33,6 +33,8 @@ Plug 'luochen1990/rainbow'
 Plug 'junegunn/fzf'
 " vimtex plugin
 Plug 'lervag/vimtex'
+" indent guide plugin
+Plug 'nathanaelkane/vim-indent-guides'
 
 
 " The following are examples of different formats supported.
@@ -273,6 +275,9 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Show diagnostic
+" noremap <silent> <leader>w :call CocAction('diagnosticInfo')<CR>
+
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
@@ -290,7 +295,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 " Fix autofix problem of current line
-nmap <leader>f  <Plug>(coc-fix-current)
+" nmap <leader>f  <Plug>(coc-fix-current)
+nmap <leader>f  :CocFix<CR>
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
@@ -332,3 +338,7 @@ let g:tagbar_type_tex = {
 au BufRead,BufNewfile *.smali set filetype=smali
 au BufRead,BufNewfile *.lus set filetype=lustre
 au BufRead,BufNewFile *.pv set filetype=proverif
+
+" enable indent guide by default
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
