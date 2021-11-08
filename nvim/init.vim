@@ -187,10 +187,6 @@ let g:ycm_auto_trigger=1
 let g:vimtex_compiler_enabled=0
 " set .tex flaver
 let g:tex_flavor = 'latex'
-" set backword research callback
-let g:vimtex_latexmk_progname = 'nvr'
-" set pdf reviewer
-let g:vimtex_view_method = 'zathura'
 
 " nerdcommenter setting
 " Add spaces after comment delimiters by default
