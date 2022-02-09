@@ -292,6 +292,18 @@ endif
   highlight ExtraWhitespace ctermbg=red guibg=red
   match ExtraWhitespace /\s\+$/
 
+  "set wrap and make j, k can work
+  set wrap
+  noremap j gj
+  noremap k gk
+  "do not split work at the end of a line
+  set linebreak
+
+else
+
+  nmap j gj
+  nmap k gk
+
 endif
 
 " The following are commented out as they cause vim to behave a lot
@@ -308,17 +320,6 @@ set incsearch		" Incremental search
 "if filereadable("/etc/vim/vimrc.local")
 "  source /etc/vim/vimrc.local
 "endif
-
-"set wrap and make j, k can work
-set wrap
-nnoremap j gj
-nnoremap k gk
-" noremap 0 g0
-" noremap $ g$
-vnoremap j gj
-vnoremap k gk
-"do not split work at the end of a line
-set linebreak
 
 set nofoldenable
 set foldmethod=syntax
