@@ -158,6 +158,9 @@ if !exists('g:vscode')
   let g:NERDTrimTrailingWhitespace = 1
   " Enable NERDCommenterToggle to check all selected lines is commented or not
   let g:NERDToggleCheckAllLines = 1
+  " Add ProVerif comment
+  let g:NERDCustomDelimiters = { 'proverif': { 'left': '(*','right': '*)' } }
+
 
   " netrw setting
   " set display style
