@@ -304,6 +304,8 @@ endif
 
 else
 
+  let mapleader=","       " leader is comma
+  let maplocalleader=","       " localleader is comma
   nmap j gj
   nmap k gk
 
