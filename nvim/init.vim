@@ -83,6 +83,9 @@ endif
 "  filetype plugin indent on
 "endif
 
+  let mapleader=","       " leader is comma
+  let maplocalleader=","       " localleader is comma
+
   set showmatch		" Show matching brackets.
 
   "set nocompatible
@@ -339,8 +342,6 @@ set list
 set lazyredraw
 
 " turn off search highlight
-let mapleader=","       " leader is comma
-let maplocalleader=","       " localleader is comma
 nnoremap <leader><space> :nohlsearch<CR>
 
 " set B and E to go to the begining and end of line
