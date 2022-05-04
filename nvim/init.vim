@@ -37,7 +37,7 @@ if !exists('g:vscode')
   " Rainbow parentheses
   Plug 'luochen1990/rainbow'
   " fzf plugin
-  Plug 'junegunn/fzf'
+  " Plug 'junegunn/fzf'
   " vimtex plugin
   Plug 'lervag/vimtex'
   " indent guide plugin
