@@ -42,6 +42,9 @@ if !exists('g:vscode')
   Plug 'lervag/vimtex'
   " indent guide plugin
   " Plug 'nathanaelkane/vim-indent-guides'
+  " markdown syntax highlight plugin
+  Plug 'godlygeek/tabular'
+  Plug 'preservim/vim-markdown'
 
 
   " The following are examples of different formats supported.
