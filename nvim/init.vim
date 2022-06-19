@@ -255,7 +255,10 @@ if !exists('g:vscode')
   command! -nargs=0 Format :call CocAction('format')
 
   " Automatically install plugins
-  let g:coc_global_extensions = ['coc-texlab']
+  let g:coc_global_extensions = ['coc-texlab', 'coc-ltex']
+
+  " Add grammar/spell check for latex file (coc-ltex setting)
+  let g:coc_filetype_map = {'tex': 'latex'}
 
   " gruvbox theme
   let g:gruvbox_guisp_fallback = "bg" " fix spell error not displayed
