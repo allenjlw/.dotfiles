@@ -254,6 +254,9 @@ if !exists('g:vscode')
   " Use `:Format` to format current buffer
   command! -nargs=0 Format :call CocAction('format')
 
+  " Automatically install plugins
+  let g:coc_global_extensions = ['coc-texlab']
+
   " gruvbox theme
   let g:gruvbox_guisp_fallback = "bg" " fix spell error not displayed
   colorscheme gruvbox
