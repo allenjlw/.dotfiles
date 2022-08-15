@@ -215,6 +215,7 @@ if !exists('g:vscode')
       \ coc#pum#visible() ? coc#pum#next(1) :
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
+  inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 
   " Use <cr> to confirm selection.
   inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
