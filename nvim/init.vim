@@ -258,7 +258,7 @@ if !exists('g:vscode')
   command! -nargs=0 Format :call CocAction('format')
 
   " Automatically install plugins
-  let g:coc_global_extensions = ['coc-texlab', 'coc-ltex', 'coc-clangd', 'coc-pyright', 'coc-sh']
+  let g:coc_global_extensions = ['coc-texlab', 'coc-ltex', 'coc-clangd', 'coc-pyright']
 
   " Add grammar/spell check for latex file (coc-ltex setting)
   let g:coc_filetype_map = {'tex': 'latex'}
