@@ -225,6 +225,10 @@ if !exists('g:vscode')
   nmap <silent> [g <Plug>(coc-diagnostic-prev)
   nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
+  " j k to jump within code snippets
+  let g:coc_snippet_next = '<c-j>'
+  let g:coc_snippet_previous = '<c-k'
+
   " Remap keys for gotos
   nmap <silent> gd <Plug>(coc-definition)
   nmap <silent> gy <Plug>(coc-type-definition)
