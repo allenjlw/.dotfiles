@@ -33,7 +33,9 @@ if !exists('g:vscode')
   " Nerdtreetab
   Plug 'jistr/vim-nerdtree-tabs'
   " Tagbar
-  Plug 'majutsushi/tagbar'
+  " Plug 'majutsushi/tagbar'
+  " Tagbar replacement
+  Plug 'liuchengxu/vista.vim'
   " Rainbow parentheses
   Plug 'luochen1990/rainbow'
   " fzf plugin
@@ -284,21 +286,25 @@ if !exists('g:vscode')
         \  }
         \}
 
-  " shortcut to open tagbar
-  nmap <leader>b :TagbarToggle<CR>
+  " shortcut to toggle vista
+  nmap <leader>b :Vista!!<CR>
+  " vista gets tag info using coc
+  let g:vista_default_executive = 'coc'
+  " not using icons
+  " let g:vista#renderer#enable_icon = 0
 
   " tagbar for latex
-  let g:tagbar_type_tex = {
-      \ 'ctagstype' : 'latex',
-      \ 'kinds'     : [
-          \ 's:sections',
-          \ 'g:graphics:0:0',
-          \ 'l:labels',
-          \ 'r:refs:1:0',
-          \ 'p:pagerefs:1:0'
-      \ ],
-      \ 'sort'    : 0,
-  \ }
+  " let g:tagbar_type_tex = {
+  "     \ 'ctagstype' : 'latex',
+  "     \ 'kinds'     : [
+  "         \ 's:sections',
+  "         \ 'g:graphics:0:0',
+  "         \ 'l:labels',
+  "         \ 'r:refs:1:0',
+  "         \ 'p:pagerefs:1:0'
+  "     \ ],
+  "     \ 'sort'    : 0,
+  " \ }
 
   " auto syntax highlight .smali .lus .pv type
   au BufRead,BufNewfile *.smali set filetype=smali
