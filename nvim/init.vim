@@ -12,7 +12,6 @@ if !exists('g:vscode')
   call plug#begin('~/.vim/bundle')
 
   " Auto complete
-  "Plug 'Valloric/YouCompleteMe'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " highlight line
   Plug 'itchyny/lightline.vim'
