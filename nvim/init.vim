@@ -289,7 +289,11 @@ nmap <leader>b :Vista!!<CR>
 " vista gets tag info using coc
 let g:vista_default_executive = 'coc'
 " not using icons
-" let g:vista#renderer#enable_icon = 0
+let g:vista#renderer#enable_icon = 1
+" exit vista window if it's the last one
+autocmd bufenter * if winnr("$") == 1 && vista#sidebar#IsOpen() | execute "normal! :q!\<CR>" | endif
+" replace icon
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 
 " tagbar for latex
 " let g:tagbar_type_tex = {
