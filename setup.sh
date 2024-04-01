@@ -1,3 +1,4 @@
+#!/bin/bash
 # install packages
 unameOut="$(uname -s)"
 case "${unameOut}" in
