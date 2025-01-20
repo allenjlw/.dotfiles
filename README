@@ -5,6 +5,6 @@ I will probably update it slowly and without any comment.:)
 
 Usage:
 1. Clone the repository
-2. cd .vrc
+2. cd .dotfiles
 3. bash setup.sh
 
