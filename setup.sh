@@ -9,9 +9,11 @@ esac
 echo ${machine}
 
 if [ "$machine" == "Linux" ]; then
-  sudo apt install neovim nodejs zsh tig
-elif [ "$machine" == "Linux" ]; then
-  brew install neovim nodejs zsh tig
+  sudo apt install neovim nodejs npm zsh tig virtualenvwrapper tmux
+  # install ls replacement eza (command is `exa`), grep replacement ripgrep (command `rg`), df replacement duf (command `duf`)
+  sudo apt install eza ripgrep fd-find duf
+elif [ "$machine" == "Mac" ]; then
+  brew install neovim nodejs zsh tig eza ripgrep fd duf
 fi
 
 # config neovim
@@ -21,9 +23,11 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # link nvim config
 ln -s `pwd`/nvim ~/.config/nvim
 
-
-# config tig
+# link tig config
 ln -s `pwd`/.tigrc ~/.tigrc
+
+# link tmux config
+ln -s `pwd`/.tmux.conf ~/.tmux.conf
 
 # config oh my zsh
 # install omz
@@ -35,3 +39,8 @@ cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syn
 cd ~/.oh-my-zsh/custom && git clone https://github.com/allenjlw/terminal-conf.git
 ln -s ~/.oh-my-zsh/custom/terminal-conf/custom-bira.zsh-theme ~/.oh-my-zsh/custom/custom-bira.zsh-theme
 sed -i 's/robbyrussell/custom-bira/g' ~/.zshrc
+
+# fd is fdfind on linux and fd on macos
+# if [ "$machine" == "Mac" ]; then
+#   sed -i 's/fdfind/fd/g' ~/.zshrc
+# fi

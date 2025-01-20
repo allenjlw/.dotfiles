@@ -56,7 +56,6 @@ plugins=(
     tig
     colored-man-pages
     command-not-found
-    zsh_reload
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -92,28 +91,29 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias ls='exa'
 alias cp='rsync -pogbr -hhh -e /dev/null --info=progress2 "$@"'
-alias gdb="gdb -q"
-alias lsenv="lsvirtualenv"
-alias mkenv="mkvirtualenv"
-alias rmenv="rmvirtualenv"
-alias grep="grep -I --color"
-alias gitmem="git config redential.helper store"
-alias sudo="sudo -E env 'PATH=$PATH'"
-alias update="sudo apt update && apt list --upgradable"
-alias upgrade="sudo apt upgrade && sudo apt autoremove --purge"
-alias tags="ctags -f .tags -R"
-alias prt="lpr -# 1 -o sides=two-sided-long-edge -o media=letter -o fit-to-page"
-alias qemu-arm="qemu-arm -L /usr/arm-linux-gnueabi/"
+alias gdb='gdb -q'
+alias lsenv='lsvirtualenv'
+alias mkenv='mkvirtualenv'
+alias rmenv='rmvirtualenv'
+alias grep='rg'
+alias find='fdfind'
+alias sudo='sudo -E env 'PATH=$PATH''
+alias update='sudo apt update && apt list --upgradable'
+alias upgrade='sudo apt upgrade && sudo apt autoremove --purge'
+# alias tags="ctags -f .tags -R"
+# alias prt="lpr -# 1 -o sides=two-sided-long-edge -o media=letter -o fit-to-page"
+# alias qemu-arm="qemu-arm -L /usr/arm-linux-gnueabi/"
 
 # used for wllvm
 export LLVM_COMPILER=clang
 
 # zsh highlighting color change
-ZSH_HIGHLIGHT_STYLES[command]=fg='010'
-ZSH_HIGHLIGHT_STYLES[alias]=fg='010'
-ZSH_HIGHLIGHT_STYLES[builtin]=fg='010'
-ZSH_HIGHLIGHT_STYLES[function]=fg='010'
+# ZSH_HIGHLIGHT_STYLES[command]=fg='010'
+# ZSH_HIGHLIGHT_STYLES[alias]=fg='010'
+# ZSH_HIGHLIGHT_STYLES[builtin]=fg='010'
+# ZSH_HIGHLIGHT_STYLES[function]=fg='010'
 
 # used for virtualenvwrapper
-source $HOME/.local/bin/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
