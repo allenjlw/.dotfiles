@@ -47,6 +47,9 @@ Plug 'lervag/vimtex'
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 
+" Plugin for markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between plug#begin/end.
