@@ -118,7 +118,8 @@ set laststatus=2
 "file encoding.
 set fileencodings=utf-8
 "set fileencoding=utf-8,GB2312,GBK,GB18030
-set termencoding=utf-8
+"removed option in version 0.11
+"set termencoding=utf-8
 
 "smali plugin configure
 filetype plugin on
@@ -179,7 +180,8 @@ map <leader>ft <plug>NERDTreeTabsToggle<CR>
 nnoremap <leader>t <C-w><C-]><C-w>T
 
 " set pastetoggle to <leader>.(,.)
-set pastetoggle=<leader>.
+" removed option in version 0.11
+" set pastetoggle=<leader>.
 
 " coc.nvim config
 " if hidden is not set, TextEdit might fail.
