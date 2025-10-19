@@ -92,16 +92,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ls='exa'
-alias cp='rsync -pogbr -hhh -e /dev/null --info=progress2 "$@"'
+# alias cp='rsync -pogbr -hhh -e /dev/null --info=progress2 "$@"'
 alias gdb='gdb -q'
 alias lsenv='lsvirtualenv'
 alias mkenv='mkvirtualenv'
 alias rmenv='rmvirtualenv'
-alias grep='rg'
+alias grep='rg -i'
 alias find='fdfind'
 alias sudo='sudo -E env 'PATH=$PATH''
-alias update='sudo apt update && apt list --upgradable'
-alias upgrade='sudo apt upgrade && sudo apt autoremove --purge'
+# alias update='sudo apt update && apt list --upgradable'
+# alias upgrade='sudo apt upgrade && sudo apt autoremove --purge'
 # alias tags="ctags -f .tags -R"
 # alias prt="lpr -# 1 -o sides=two-sided-long-edge -o media=letter -o fit-to-page"
 # alias qemu-arm="qemu-arm -L /usr/arm-linux-gnueabi/"
@@ -117,3 +117,6 @@ export LLVM_COMPILER=clang
 
 # used for virtualenvwrapper
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+# setup fzf shell integration
+source <(fzf --zsh)

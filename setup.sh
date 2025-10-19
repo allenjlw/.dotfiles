@@ -13,7 +13,7 @@ if [ "$machine" == "Linux" ]; then
   # install ls replacement eza (command is `exa`), grep replacement ripgrep (command `rg`), df replacement duf (command `duf`)
   sudo apt install eza ripgrep fd-find duf
 elif [ "$machine" == "Mac" ]; then
-  brew install neovim nodejs zsh tig eza ripgrep fd duf
+  brew install neovim nodejs zsh tig eza ripgrep fd duf fzf
 fi
 
 # config neovim
