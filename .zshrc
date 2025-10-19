@@ -129,8 +129,9 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 # setup fzf shell integration
 source <(fzf --zsh)
 
+# The following is for macOS only
 # config for brew cmd completion
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:${FPATH}"
 
 # enable zsh-completions
 FPATH=$HOMEBREW_PREFIX/share/zsh-completions:$FPATH
