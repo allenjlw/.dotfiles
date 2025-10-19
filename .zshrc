@@ -55,9 +55,6 @@ plugins=(
     git
     tig
     colored-man-pages
-    command-not-found
-    zsh-autosuggestions
-    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -98,7 +95,8 @@ alias lsenv='lsvirtualenv'
 alias mkenv='mkvirtualenv'
 alias rmenv='rmvirtualenv'
 alias grep='rg -i'
-alias find='fdfind'
+alias rg='rg -i'
+# alias find='fdfind'
 alias sudo='sudo -E env 'PATH=$PATH''
 # alias update='sudo apt update && apt list --upgradable'
 # alias upgrade='sudo apt upgrade && sudo apt autoremove --purge'
@@ -120,3 +118,30 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 # setup fzf shell integration
 source <(fzf --zsh)
+
+# config for brew cmd completion
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+# enable zsh-completions
+if type brew &>/dev/null; then
+     FPATH=$HOMEBREW_PREFIX/share/zsh-completions:$FPATH
+fi
+
+# enable zsh-autocomplete
+source $HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+# enable zsh-autosuggestions
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# enable zsh-syntax-highlighting
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/highlighters
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# script for 'command-not-found' functionality
+HB_CNF_HANDLER="$HOMEBREW_PREFIX/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
+if [ -f "$HB_CNF_HANDLER" ]; then
+  source "$HB_CNF_HANDLER";
+fi
+
+# export HOMEBREW_AUTO_UPDATE_SECS=604800
+export HOMEBREW_NO_ENV_HINTS=1

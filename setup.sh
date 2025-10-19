@@ -13,7 +13,7 @@ if [ "$machine" == "Linux" ]; then
   # install ls replacement eza (command is `exa`), grep replacement ripgrep (command `rg`), df replacement duf (command `duf`)
   sudo apt install eza ripgrep fd-find duf
 elif [ "$machine" == "Mac" ]; then
-  brew install neovim nodejs zsh tig eza ripgrep fd duf fzf
+  brew install neovim nodejs zsh zsh-completions zsh-autosuggestions zsh-autocomplete zsh-syntax-highlighting tig eza ripgrep fd duf fzf
 fi
 
 # config neovim
@@ -33,8 +33,8 @@ ln -s `pwd`/.tmux.conf ~/.tmux.conf
 # install omz
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # install omz plugin
-cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions
-cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+# cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions
+# cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 # clone the configuration
 cd ~/.oh-my-zsh/custom && git clone https://github.com/allenjlw/terminal-conf.git
 ln -s ~/.oh-my-zsh/custom/terminal-conf/custom-bira.zsh-theme ~/.oh-my-zsh/custom/custom-bira.zsh-theme
