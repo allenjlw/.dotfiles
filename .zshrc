@@ -123,9 +123,7 @@ source <(fzf --zsh)
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 # enable zsh-completions
-if type brew &>/dev/null; then
-     FPATH=$HOMEBREW_PREFIX/share/zsh-completions:$FPATH
-fi
+FPATH=$HOMEBREW_PREFIX/share/zsh-completions:$FPATH
 
 # enable zsh-autocomplete
 source $HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
