@@ -55,7 +55,17 @@ plugins=(
     git
     tig
     colored-man-pages
+    # On linux, manage plugins via oh-my-zsh
+    # command-not-found
+    # zsh-completions
+    # zsh-autocomplete
+    # zsh-autosuggestions
+    # zsh-syntax-highlighting
 )
+
+# On linx only, for zsh-completions
+# fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+# autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
