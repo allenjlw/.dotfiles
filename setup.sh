@@ -32,9 +32,16 @@ ln -s `pwd`/.tmux.conf ~/.tmux.conf
 # config oh my zsh
 # install omz
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# install omz plugin
-# cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions
-# cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+
+if [ "$machine" == "Linux" ]; then
+  # zsh plugins are managed via homebrew on macos
+  # install omz plugin zsh-autosuggestions, zsh-completions, zsh-autocomplete, zsh-syntax-highlighting
+  cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions
+  cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-completions.git
+  cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/marlonrichert/zsh-autocomplete.git
+  cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+fi
+
 # clone the configuration
 cd ~/.oh-my-zsh/custom && git clone https://github.com/allenjlw/terminal-conf.git
 ln -s ~/.oh-my-zsh/custom/terminal-conf/custom-bira.zsh-theme ~/.oh-my-zsh/custom/custom-bira.zsh-theme
