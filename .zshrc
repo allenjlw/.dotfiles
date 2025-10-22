@@ -154,19 +154,3 @@ fi
 
 # export HOMEBREW_AUTO_UPDATE_SECS=604800
 export HOMEBREW_NO_ENV_HINTS=1
-
-# disable zsh-autocomplete to search history when pressing arrow keys
-() {
-   local -a prefix=( '\e'{\[,O} )
-   local -a up=( ${^prefix}A ) down=( ${^prefix}B )
-   local key=
-   for key in $up[@]; do
-      bindkey "$key" up-line-or-history
-   done
-   for key in $down[@]; do
-      bindkey "$key" down-line-or-history
-   done
-}
-
-# enable tab to select different options with zsh-autocomplete
-bindkey '^I' menu-complete
