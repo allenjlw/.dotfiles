@@ -167,3 +167,6 @@ export HOMEBREW_NO_ENV_HINTS=1
       bindkey "$key" down-line-or-history
    done
 }
+
+# enable tab to select different options with zsh-autocomplete
+bindkey '^I' menu-complete
